@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: university-management
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:h2:mem:university;DB_CLOSE_DELAY=-1}
+    username: ${SPRING_DATASOURCE_USERNAME:sa}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.h2.Driver}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: ${H2_CONSOLE_ENABLED:false}
+server:
+  error:
+    include-message: always
