@@ -33,7 +33,7 @@ class UserControllerIntegrationTest {
 
     // 2. GET /api/students as ADMIN → 200
     @Test
-    @WithMockUser(roles = "TEACHER")
+    @WithMockUser(roles = "ADMIN")
     void testGetStudentsAsAdminRole() throws Exception {
         mockMvc.perform(get("/api/students")
                         .accept(MediaType.APPLICATION_JSON))
